@@ -39,3 +39,9 @@ RUN wget ${ALERTMANAGER_DOWNLOAD_URL}
 ENV NODE_EXPORTER_VERSION=0.18.1
 ENV NODE_EXPORTER_DOWNLOAD_URL=https://github.com/prometheus/node_exporter/releases/download/v${NODE_EXPORTER_VERSION}/node_exporter-${NODE_EXPORTER_VERSION}.linux-amd64.tar.gz
 RUN wget ${NODE_EXPORTER_DOWNLOAD_URL}
+
+
+#下载harbor
+ENV HARBOR_VERSION=1.10.1
+ENV HARBOR_DOWNLOAD_URL=https://github.com/goharbor/harbor/releases/download/v${HARBOR_VERSION}/harbor-offline-installer-v${HARBOR_VERSION}.tgz
+RUN wget ${HARBOR_DOWNLOAD_URL}
